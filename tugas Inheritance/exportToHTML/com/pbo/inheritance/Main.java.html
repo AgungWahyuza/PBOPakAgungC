@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #808080;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.pbo.inheritance</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Main {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args){</span>
+        <span class="s0">int </span><span class="s1">hasil = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s1">JamurTiram jamurtiram = </span><span class="s0">new </span><span class="s1">JamurTiram()</span><span class="s0">; </span><span class="s3">//memanggil constructor</span>
+        <span class="s1">JamurShitake jamurshitake = </span><span class="s0">new </span><span class="s1">JamurShitake()</span><span class="s0">; </span><span class="s3">//memanggil constuctor</span>
+        <span class="s1">JamurWebcaps jamurwebcaps = </span><span class="s0">new </span><span class="s1">JamurWebcaps()</span><span class="s0">; </span><span class="s3">//memanggil consturctor</span>
+        <span class="s1">JamurPayungMaut jamurpayungmaut = </span><span class="s0">new </span><span class="s1">JamurPayungMaut()</span><span class="s0">; </span><span class="s3">//memanggil constructor</span>
+
+        <span class="s0">while </span><span class="s1">(hasil &lt; </span><span class="s2">1 </span><span class="s1">|| hasil &gt; </span><span class="s2">4</span><span class="s1">) {</span>
+            <span class="s1">hasil = menuUtama()</span><span class="s0">;</span>
+            <span class="s1">System.out.print(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+            <span class="s0">switch </span><span class="s1">(hasil) {</span>
+                <span class="s0">case </span><span class="s2">1</span><span class="s1">:</span>
+                    <span class="s1">jamurtiram.namailmiah()</span><span class="s0">;</span>
+                    <span class="s1">jamurtiram.habitat()</span><span class="s0">;</span>
+                    <span class="s1">jamurtiram.beracun()</span><span class="s0">;</span>
+                    <span class="s1">jamurtiram.makan()</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s2">2</span><span class="s1">:</span>
+                    <span class="s1">jamurshitake.namailmiah()</span><span class="s0">;</span>
+                    <span class="s1">jamurshitake.habitat()</span><span class="s0">;</span>
+                    <span class="s1">jamurshitake.beracun()</span><span class="s0">;</span>
+                    <span class="s1">jamurshitake.makan()</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s2">3</span><span class="s1">:</span>
+                    <span class="s1">jamurwebcaps.namailmiah()</span><span class="s0">;</span>
+                    <span class="s1">jamurwebcaps.habitat()</span><span class="s0">;</span>
+                    <span class="s1">jamurwebcaps.beracun()</span><span class="s0">;</span>
+                    <span class="s1">jamurwebcaps.makan()</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s2">4</span><span class="s1">:</span>
+                    <span class="s1">jamurpayungmaut.namailmiah()</span><span class="s0">;</span>
+                    <span class="s1">jamurpayungmaut.habitat()</span><span class="s0">;</span>
+                    <span class="s1">jamurpayungmaut.beracun()</span><span class="s0">;</span>
+                    <span class="s1">jamurpayungmaut.makan()</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">default</span><span class="s1">:</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private static int </span><span class="s1">menuUtama() {</span>
+        <span class="s0">int </span><span class="s1">inputMenu</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">______________________________________________________________&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">|                                                            |&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">|                      JENIS JENIS JAMUR                     |&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">|                                                            |&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">|============================================================|&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">| NAMA : I GUSTI PUTU AGUNG WAHYU SENTANA PUTRA              |&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">| NIM  : 2105551081                                          |&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">|____________________________________________________________|&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+                                                            +&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+                         MENU                               +&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+------------------------------------------------------------+&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+       [1] Jamur Tiram                                      +&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+       [2] Jamur Shitake                                    +&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+       [3] Jamur WebCaps                                    +&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+       [4] Jamur Payung Maut                                +&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">+                                                            +&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.print(</span><span class="s4">&quot;</span><span class="s0">\t </span><span class="s4">Pilihan Anda  (1-4) :  &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+
+        <span class="s1">inputMenu = input.nextInt()</span><span class="s0">;</span>
+
+        <span class="s0">return </span><span class="s1">inputMenu</span><span class="s0">;</span>
+
+
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
